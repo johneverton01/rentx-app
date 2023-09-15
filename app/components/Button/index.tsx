@@ -14,7 +14,9 @@ export function Button({ label, color, onPress }: ButtonProps) {
       onPress={onPress}
       activeOpacity={0.8}
     >
-      <Text className="font-txt text-base text-white">{label}</Text>
+      <Text className="font-txtMed text-base font-medium text-white">
+        {label}
+      </Text>
     </TouchableOpacity>
   )
 }

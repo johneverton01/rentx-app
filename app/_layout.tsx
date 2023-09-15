@@ -7,6 +7,8 @@ import {
 import { Inter_400Regular, Inter_500Medium } from '@expo-google-fonts/inter'
 import { SplashScreen, Stack } from 'expo-router'
 
+import colors from 'tailwindcss/colors'
+
 export default function Layout() {
   const [hasFontsLoaded] = useFonts({
     Archivo_400Regular,
@@ -25,7 +27,7 @@ export default function Layout() {
       <Stack
         screenOptions={{
           headerShown: false,
-          contentStyle: { backgroundColor: '#f4f5f6' },
+          contentStyle: { backgroundColor: colors.gray[200] },
           animation: 'fade',
         }}
       >

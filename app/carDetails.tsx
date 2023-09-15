@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar'
 import { ScrollView, Text, View } from 'react-native'
 import { ImageSlider } from './components/ImageSlider'
 
+import { Link } from 'expo-router'
 import { getBottomSpace } from 'react-native-iphone-x-helper'
 import Speed from '../src/assets/speed.svg'
 import { Accessory } from './components/Accessory'
@@ -72,7 +73,9 @@ export default function CarDetails() {
           getBottomSpace() + 24
         }px]`}
       >
-        <Button label="Escolher período do aluguel" />
+        <Link href="/scheduling" asChild>
+          <Button label="Escolher período do aluguel" />
+        </Link>
       </View>
     </View>
   )

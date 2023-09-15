@@ -7,6 +7,7 @@ module.exports = {
         title: 'Archivo_600SemiBold',
         body: 'Archivo_500Medium',
         txt: 'Inter_400Regular',
+        txtMed: 'Inter_500Medium',
       },
     },
     colors: {

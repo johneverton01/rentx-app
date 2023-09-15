@@ -10,7 +10,7 @@ export function ImageSlider({ imagesUrl }: ImageSliderProps) {
     <View className="w-screen">
       <View className="flex h-28 w-full flex-row items-end pb-6">
         <View className="flex w-full flex-row items-center justify-between px-4">
-          <BackButton />
+          <BackButton link="/" />
           <View className="mr-2 flex flex-row items-center gap-2">
             <View className="h-2 w-2 rounded-full bg-gray-500" />
             <View className="h-2 w-2 rounded-full bg-gray-300" />
