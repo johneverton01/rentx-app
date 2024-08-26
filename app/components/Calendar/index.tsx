@@ -53,7 +53,7 @@ export function Calendar() {
   const fonts = fullConfig.theme?.fontFamily
   return (
     <RNCalendar
-      renderArrow={(direction) => (
+      renderArrow={(direction: any) => (
         <Feather
           size={24}
           color={colors.gray[500]}
@@ -68,10 +68,10 @@ export function Calendar() {
         marginBottom: 10,
       }}
       theme={{
-        textDayFontFamily: fonts!.body as string,
-        textDayHeaderFontFamily: fonts!.body as string,
+        textDayFontFamily: fonts ? fonts?.body : '',
+        textDayHeaderFontFamily: fonts ? fonts?.body : '',
         textDayHeaderFontSize: 10,
-        textMonthFontFamily: fonts!.title as string,
+        textMonthFontFamily: fonts?.title as string,
         textMonthFontSize: 20,
         monthTextColor: colors.gray[500],
         arrowStyle: {

@@ -8,7 +8,9 @@ import ArrowSvg from '../src/assets/arrow.svg'
 import { Button } from './components/Button'
 import { Calendar } from './components/Calendar'
 
+import { Link } from 'expo-router'
 import colors from 'tailwindcss/colors'
+import { InputDate } from './components/InputDate'
 
 export default function Scheduling() {
   return (
@@ -23,25 +25,12 @@ export default function Scheduling() {
         </Text>
 
         <View className="mt-6 flex flex-row items-center justify-between">
-          <View className="flex flex-col">
-            <Text className="font-body text-xs uppercase text-gray-600">
-              De
-            </Text>
-            <Text className="font-body text-base text-gray-600">
-              18/06/2021
-            </Text>
+          <InputDate title="De" date="15/06/2021" />
+          <View className="w-24">
+            <ArrowSvg />
           </View>
 
-          <ArrowSvg />
-
-          <View className="flex flex-col">
-            <Text className="font-body text-xs uppercase text-gray-600">
-              Até
-            </Text>
-            <Text className="font-body text-base text-gray-600">
-              18/06/2021
-            </Text>
-          </View>
+          <InputDate title="Até" date={undefined} />
         </View>
       </View>
 
@@ -50,7 +39,9 @@ export default function Scheduling() {
       </ScrollView>
 
       <View className="p-6">
-        <Button label="Confirmar" />
+        <Link href="/schedulingDetails" asChild>
+          <Button label="Confirmar" />
+        </Link>
       </View>
     </View>
   )

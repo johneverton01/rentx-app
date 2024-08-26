@@ -1,6 +1,6 @@
-import React from 'react'
+import type React from 'react'
 import { Text, View } from 'react-native'
-import { SvgProps } from 'react-native-svg'
+import type { SvgProps } from 'react-native-svg'
 
 interface AccessoryProps {
   description: string
